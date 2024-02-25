@@ -14,7 +14,8 @@ A unique ID generator for distributed systems
 * We utilise the database's `auto-increment` feature
 * Instead of incrementing the next ID by `1` increment it by `K`, where `K` is the number of DB servers
 
-![alt text](image.png)
+![image](https://github.com/Sheersendu/UniqueID_Generator/assets/62256588/3b077734-ac95-4ad8-96ee-1d6f625e8f01)
+
 
 * Drawbacks:
     - Hard to scale with multiple Data centers
@@ -37,7 +38,8 @@ A unique ID generator for distributed systems
 
 ### 4. Twitter Snowflake Algorithm
 
-![alt text](image-2.png)
+![image](https://github.com/Sheersendu/UniqueID_Generator/assets/62256588/b5885da3-a8aa-4464-8804-24eccbdb4429)
+
 
 * **Sign bit** : It will always be 0. Reserved for future uses.
 * **Timestamp** : Milliseconds since the epoch/custom epoch. We can use twitter's default epoch. Maximum timestamp can be represented in 41 bits ~= `69 years`(2^41), after that we need new epoch o radopt other techniques
