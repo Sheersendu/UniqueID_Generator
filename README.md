@@ -1,4 +1,4 @@
-# UniqueID_Generator
+# Unique ID Generator
 A unique ID generator for distributed systems
 
 ## Requirements
