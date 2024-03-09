@@ -42,7 +42,7 @@ A unique ID generator for distributed systems
 
 
 * **Sign bit** : It will always be 0. Reserved for future uses.
-* **Timestamp** : Milliseconds since the epoch/custom epoch. We can use twitter's default epoch. Maximum timestamp can be represented in 41 bits ~= `69 years`(2^41), after that we need new epoch o radopt other techniques
+* **Timestamp** : Milliseconds since the epoch/custom epoch(Current time in milliseconds - custom epoch time in milliseconds). We can use twitter's default epoch. Maximum timestamp can be represented in 41 bits ~= `69 years`(2^41), after that we need new epoch o radopt other techniques
 * **Datacenter ID** : 5 bits = `32`(2^5) datacenters
 * **Machine ID** : 5 bits = `32`(2^5) machines per datacenter
 * **Sequence Number** : For every ID generated on that machine, the sequence number is incremented by `1`. Number is reset to `0` every millisecond. Sequence Number is 12 bits hence `4096`(2^12) combinations/ms/machine
