@@ -46,3 +46,25 @@ A unique ID generator for distributed systems
 * **Datacenter ID** : 5 bits = `32`(2^5) datacenters
 * **Machine ID** : 5 bits = `32`(2^5) machines per datacenter
 * **Sequence Number** : For every ID generated on that machine, the sequence number is incremented by `1`. Number is reset to `0` every millisecond. Sequence Number is 12 bits hence `4096`(2^12) combinations/ms/machine
+
+## Getting Started
+
+1. **Clone the Repository:**
+
+    ```bash
+    git https://github.com/Sheersendu/UniqueID_Generator.git
+    cd UniqueIDGenerator
+    ```
+
+2. **Build the Spring Boot Application:**
+
+    ```bash
+    mvn clean install
+
+3. **Create a new docker image:**
+    ```bash
+   docker build -t image-name .
+
+4. **Run the docker image:**
+    ```bash
+   docker run -p 8080:8080 your-image-name
