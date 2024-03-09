@@ -1,13 +1,17 @@
 package com.UniqueIDGenerator.utilities;
 
+import org.springframework.stereotype.Service;
+
 import java.time.Instant;
 
 import static com.UniqueIDGenerator.utilities.Constants.*;
 import static java.lang.System.currentTimeMillis;
 
+@Service
 public class SnowflakeIDGenerator {
     private static final long EPOCH = Instant.parse("2024-01-01T00:00:00Z").toEpochMilli();
-    private int datacenterId, machineId;
+    private final int datacenterId;
+    private final int machineId;
     private long lastTimestamp = -1;
     private int sequence = 0;
     private final int maximumSequence = (int) Math.pow(2, MAX_SEQUENCE_NUMBER_BITS);
@@ -57,9 +61,4 @@ public class SnowflakeIDGenerator {
         return binaryString;
     }
 
-    public static void main(String[] args) {
-        SnowflakeIDGenerator generator = new SnowflakeIDGenerator();
-        long id = generator.nextId();
-        System.out.println(id);
-    }
 }
