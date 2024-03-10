@@ -67,4 +67,14 @@ A unique ID generator for distributed systems
 
 4. **Run the docker image:**
     ```bash
-   docker run -p 8080:8080 your-image-name
+   docker run -p 8080:8080 image-name
+   ```
+   Note : This will assume there is only 1 Datacenter which contains only 1 machine in it
+
+5. **Running the docker image with different Datacenter ID and Machine ID use:**
+    ```bash
+   docker run -e Datacenter_ID=Integer_value -e Machine_ID=Integer_value -p 8080:8080 image-name
+   ```
+   Note : Maximum 32 datacenters and each datacenter contains maximum of 32 machines are possible. Additionally, ID range : [0,31]
+
+   
